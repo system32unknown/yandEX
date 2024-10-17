@@ -56,9 +56,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes.cs" />
     <Compile Include="Patches\AntiCheatBypass.cs" />
     <Compile Include="Patches\UpdateTextPatch.cs" />
-    <Compile Include="Plugin.cs" />
+    <Compile Include="BasePlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

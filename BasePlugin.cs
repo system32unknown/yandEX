@@ -2,17 +2,17 @@
 using BepInEx.Logging;
 using HarmonyLib;
 using System;
-using yandEX.Patches;
+using YandEX.Patches;
 
 namespace YandEX {
-    [BepInPlugin(modGUID, "YanderEX", verNum)]
-    public class ModBase : BaseUnityPlugin {
+    [BepInPlugin(modGUID, "YandEX", verNum)]
+    public class YandereAPI : BaseUnityPlugin {
         const string modGUID = "altertoriel.yandex";
         const string verNum = "1.0.0.0";
 
         public static Version Version => new Version(verNum);
 
-        internal static ModBase i;
+        internal static YandereAPI i;
         internal ManualLogSource mls;
 
         void Awake() {
@@ -23,9 +23,7 @@ namespace YandEX {
             mls.LogInfo("Mod Installed Successfully.");
             mls.LogInfo($"Mod Version: {verNum}");
 
-            harmony.PatchAll(typeof(ModBase));
-            harmony.PatchAll(typeof(AntiCheatBypass));
-            harmony.PatchAll(typeof(UpdateTextPatch));
+            harmony.PatchAllConditionals();
         }
     }
 }

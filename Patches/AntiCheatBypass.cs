@@ -1,5 +1,5 @@
 ﻿using HarmonyLib;
-namespace yandEX.Patches {
+namespace YandEX.Patches {
     [HarmonyPatch(typeof(AntiCheatScript))]
     internal class AntiCheatBypass {
         [HarmonyPatch("Update"), HarmonyPostfix]
