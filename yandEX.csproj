@@ -58,6 +58,8 @@
   <ItemGroup>
     <Compile Include="Attributes.cs" />
     <Compile Include="Patches\AntiCheatBypass.cs" />
+    <Compile Include="Patches\DisclaimerShit.cs" />
+    <Compile Include="Patches\SkipSponsorPatch.cs" />
     <Compile Include="Patches\UpdateTextPatch.cs" />
     <Compile Include="BasePlugin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
